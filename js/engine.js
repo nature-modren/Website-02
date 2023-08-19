@@ -1,4 +1,4 @@
-window.addEventListener('beforeunload', function (e) {
+/*window.addEventListener('beforeunload', function (e) {
     e.preventDefault(); // Mencegah refresh otomatis
     Swal.fire({
         title: 'Do you want to save the changes?',
@@ -16,3 +16,4 @@ window.addEventListener('beforeunload', function (e) {
         }
     });
 });
+*/
