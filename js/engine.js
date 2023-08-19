@@ -8,7 +8,7 @@
         denyButtonText: `Don't save`,
     }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
+      /* if (result.isConfirmed) {
             Swal.fire('Saved!', '', 'success')
             window.location.reload(); // Merefresh halaman saat user memilih untuk menyimpan perubahan
         } else if (result.isDenied) {
