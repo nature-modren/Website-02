@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title> halaman login</title>
+           <link rel="stylesheet" href="css/bootstrap.min.css" />    
+        <link rel="stylesheet" href="css/hydra.css">   
+    
+</head>
+<body class="">
+  <div class="container-fluid ">
+    <div class="row parent d-flex justify-content-center align-items-center p-4" style="min-height:100vh">
+        <div class="child col-md-4 border p-4 bg-light border-dark border-2">
+            <form id="myform" name="daftar pengunjung" method="post"
+            data-netlify="true" data-netlify-recaptcha="true" class="">
+  <div class="mb-3">
+      <p class="text-center fs-3">Login</p>
+ </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+       <div id="nameHelp" class="form-text">Password diberikan secara invite</div>
+
+<div class="form-check form-switch mt-2">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Lihat password</label>
+</div>
+  </div>
+
+  <div class="mt-2 mb-2" data-netlify-recaptcha="true"></div>
+
+  <div class="d-grid ">
+  <button type="submit" onclick="" class="btn btn-primary btn-block ">Kirim</button>
+</div>
+</form>
+ 
+ <br>
+ 
+  <div class="card border-dark mb-3 text-bg-danger" style="max-width: 18rem;">
+  <div class="card-header text-center">FORBIDDEN 403</div>
+  <div class="card-body text-center">
+    <h2 class="card-title ">PERINGATAN</h2>
+    <p class="card-text">kamu tidak memiliki izin untuk masuk</p>
+  </div>
+</div>
+        </div>
+    </div>
+   </div> 
+
+        <script src="js/engine.js"></script>
+        <script src="js/bootstrap.min.js"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+</body>
+</html>
