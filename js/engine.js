@@ -23,10 +23,12 @@ document.getElementById('myform').addEventListener('submit',function(e){
            e.preventDefault();
             Password = document.getElementById('exampleInputPassword1').value;
             
-            if(Password === '123'){
+            if(Password === 'kelvin'){
             location.href="Index-003.html"
-          }else{
-              alert("password salah")
+            }else if if(Password === 'Kelvin'){
+            location.href="Index-003.html"
+         }else{
+              Swal.fire('Password Salah!')
       };
        });
        
