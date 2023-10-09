@@ -25,9 +25,9 @@ document.getElementById('myform').addEventListener('submit',function(e){
             
             if(Password === 'kelvin'){
             location.href="Index-003.html"
-            }else if if(Password === 'Kelvin'){
+            }else if(Password === 'Kelvin'){
             location.href="Index-003.html"
-         }else{
+            }else{
               Swal.fire('Password Salah!')
       };
        });
