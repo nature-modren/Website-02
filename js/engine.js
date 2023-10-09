@@ -17,3 +17,28 @@
     });
 });
 */
+
+
+document.getElementById('myform').addEventListener('submit',function(e){
+           e.preventDefault();
+            Password = document.getElementById('exampleInputPassword1').value;
+            
+            if(Password === '123'){
+            location.href="Index-003.html"
+          }else{
+              alert("password salah")
+      };
+       });
+       
+       
+  const pass = document.getElementById('exampleInputPassword1');
+  const  tombol = document.getElementById('flexSwitchCheckDefault');
+
+tombol.addEventListener('change',function(){
+ if(tombol.checked){
+     pass.type = 'text'
+ }else{
+     pass.type = 'password'
+     }
+   });
+    
