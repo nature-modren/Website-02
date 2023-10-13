@@ -83,6 +83,16 @@ document.getElementById('myform').addEventListener('submit', async function(e){
   e.preventDefault();
   const password = document.getElementById('exampleInputPassword1').value;
 
+
+function setLoggedInCookie() {
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 1); // Cookie berlaku selama 1 hari
+
+    document.cookie = `loggedIn=true; expires=${expirationDate.toUTCString()}; path=/`;
+};
+
+
+
   const response = await fetch('.netlify/functions/auth', {
     method: 'POST',
     body: JSON.stringify({ password }),
@@ -92,10 +102,10 @@ document.getElementById('myform').addEventListener('submit', async function(e){
 
      console.log(responseData)
 
-  if (responseData.statusCode === 200) {
+  if (responseData.message === 200) {
       location.href = "Index-003.html";
       
-    } else if (responseData.statusCode === 201) {
+    } else if (responseData.message === 201) {
  
 Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
   } else {
