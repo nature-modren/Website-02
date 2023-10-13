@@ -1,0 +1,12 @@
+{
+  "name": "project-002",
+  "version": "1.0.0",
+  "description": "modren website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
+}
