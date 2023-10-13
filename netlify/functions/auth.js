@@ -1,6 +1,6 @@
 //build serverless netlify 
 
-exports.handler = async (event) => {
+/* exports.handler = async (event) => {
   if (event.httpMethod === "POST") {
     const requestBody = JSON.parse(event.body);
 
@@ -29,4 +29,36 @@ exports.handler = async (event) => {
       body: JSON.stringify({ message: "Metode HTTP tidak didukung." }),
     };
   }
-};
+}; */
+
+
+exports.handler = async (event) => { 
+   if (event.httpMethod === "POST") { 
+     const requestBody = JSON.parse(event.body); 
+  
+     const password = requestBody.password; 
+  
+     if (password === "12345678") { 
+       return { 
+         statusCode: 200, 
+         body: JSON.stringify({ message: "Password valid" }), 
+       }; 
+     } else if (password === "friend") {
+       // Jika password adalah "friend", tampilkan pesan "hi"
+       return { 
+         statusCode: 200, 
+         body: JSON.stringify({ message: ":v ada ada saja beliau ini" }), 
+       }; 
+     } else { 
+       return { 
+         statusCode: 400, 
+         body: JSON.stringify({ message: "Password invalid." }), 
+       }; 
+     } 
+   } else { 
+     return { 
+       statusCode: 405, 
+       body: JSON.stringify({ message: "Metode HTTP tidak didukung." }), 
+     }; 
+   } 
+ };
