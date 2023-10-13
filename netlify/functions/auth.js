@@ -10,6 +10,9 @@ exports.handler = async (event) => {
 
 const hashedPassword = process.env.HASHED_PASSWORD;
 
+console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
+
+
    const passwordMatch = await bcrypt.compare(password, hashedPassword);
 
         if (passwordMatch) {
