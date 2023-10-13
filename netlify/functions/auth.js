@@ -8,10 +8,7 @@ exports.handler = async (event) => {
         const requestBody = JSON.parse(event.body);
         const password = requestBody.password;
 
-const hashedPassword = process.env.HASHED_PASSWORD;
-passwordMatch = await bcrypt.compare(password,hashedPassword)
-
-const passwordToHash = '12345678'; // Kata sandi yang ingin Anda hash
+const passwordToHash = password; // Kata sandi yang ingin Anda hash
 const saltRounds = 10; // Jumlah putaran salt (biasanya antara 10-12)
 
 // Menghasilkan salt
@@ -19,6 +16,9 @@ const salt = bcrypt.genSaltSync(saltRounds);
 
 // Menghasilkan hash kata sandi dengan salt
 const passPassword = bcrypt.hashSync(passwordToHash, salt);
+
+const hashedPassword = process.env.HASHED_PASSWORD;
+passwordMatch = await bcrypt.compare(passPassword,hashedPassword)
    
         if (passwordMatch) {
             return {
