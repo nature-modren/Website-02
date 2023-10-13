@@ -44,7 +44,7 @@ tombol.addEventListener('change',function(){
      }
    });
     
-*/
+
 
 document.getElementById('myform').addEventListener('submit', async function(e){
   e.preventDefault();
@@ -61,6 +61,44 @@ document.getElementById('myform').addEventListener('submit', async function(e){
   if (response.ok) {
     // Jika respons berhasil, arahkan ke halaman lain
     location.href = "Index-003.html";
+  } else {
+    // Jika respons gagal, tampilkan pesan kesalahan dengan SweetAlert
+    Swal.fire('Password Salah!', responseData.message, 'error');
+  }
+});
+
+const passwordField = document.getElementById('exampleInputPassword1');
+const showPasswordSwitch = document.getElementById('flexSwitchCheckDefault');
+
+showPasswordSwitch.addEventListener('change', function() {
+  if (showPasswordSwitch.checked) {
+    passwordField.type = 'text';
+  } else {
+    passwordField.type = 'password';
+  }
+}); */
+
+
+document.getElementById('myform').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const password = document.getElementById('exampleInputPassword1').value;
+
+  // Kirim permintaan POST ke fungsi Netlify dengan password yang dimasukkan
+  const response = await fetch('/.netlify/functions/auth', {
+    method: 'POST',
+    body: JSON.stringify({ password }),
+  });
+
+  const responseData = await response.json();
+
+  if (response.ok) {
+    if (responseData.message === ":v ada ada saja beliau ini") {
+      // Jika pesan adalah ":v ada ada saja beliau ini", tampilkan SweetAlert ":v ada ada saja beliau ini"
+      Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
+    } else {
+      // Jika respons berhasil tetapi bukan "hi", arahkan ke halaman lain
+      location.href = "Index-003.html";
+    }
   } else {
     // Jika respons gagal, tampilkan pesan kesalahan dengan SweetAlert
     Swal.fire('Password Salah!', responseData.message, 'error');
