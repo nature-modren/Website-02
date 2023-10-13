@@ -9,7 +9,7 @@ exports.handler = async (event) => {
         const password = requestBody.password;
 
 const hashedPassword = process.env.HASHED_PASSWORD;
-
+passwordMatch = await bcrypt.compare(password,hashedPassword)
 
 const passwordToHash = '12345678'; // Kata sandi yang ingin Anda hash
 const saltRounds = 10; // Jumlah putaran salt (biasanya antara 10-12)
