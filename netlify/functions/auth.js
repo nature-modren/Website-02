@@ -18,10 +18,7 @@ exports.handler = async (event) => {
      const password = requestBody.password; 
      
      if (password === "12345678") {  
-    setLoggedInCookie() 
-    return {  
-        statusCode: 200,  
-        body: JSON.stringify({ message: "Password valid" }),  
+    setLoggedInCookie()
     };  
 } else if (password === "friend") { 
     // Jika password adalah "friend", tampilkan pesan "hi" 
@@ -49,3 +46,6 @@ exports.handler = async (event) => {
    } 
  };
 
+/*return {  
+        statusCode: 200,  
+        body: JSON.stringify({ message: "Password valid" }), */
