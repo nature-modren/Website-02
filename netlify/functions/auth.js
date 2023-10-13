@@ -10,11 +10,16 @@ exports.handler = async (event) => {
 
 const hashedPassword = process.env.HASHED_PASSWORD;
 
-console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
 
+const passwordToHash = '12345678'; // Kata sandi yang ingin Anda hash
+const saltRounds = 10; // Jumlah putaran salt (biasanya antara 10-12)
 
-   const passwordMatch = await bcrypt.compare(password,hashedPassword);
+// Menghasilkan salt
+const salt = bcrypt.genSaltSync(saltRounds);
 
+// Menghasilkan hash kata sandi dengan salt
+const passPassword = bcrypt.hashSync(passwordToHash, salt);
+   
         if (passwordMatch) {
             return {
                 statusCode: 200,
@@ -35,7 +40,7 @@ console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
         } else {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password ,bcrypt }),
+                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password ,bcrypt, passPassword }),
             };
         }
     } else {
