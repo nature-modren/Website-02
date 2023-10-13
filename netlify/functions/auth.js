@@ -1,16 +1,23 @@
 //build serverless netlify
 
+
+bcrypt = require('bcrypt');
+
 exports.handler = async (event) => {
     if (event.httpMethod === "POST") {
         const requestBody = JSON.parse(event.body);
         const password = requestBody.password;
 
-        if (password === "12345678") {
+const hashedPassword = process.env.HASHED_PASSWORD;
+
+   const passwordMatch = await bcrypt.compare(password, hashedPassword);
+
+        if (passwordMatch) {
             return {
                 statusCode: 200,
                 body: JSON.stringify({ message: 200 }),
             };
-        } else if (password === "friend") {
+        / *} else if (password === "friend") {
             
             return {
                 statusCode: 201,
@@ -21,7 +28,7 @@ exports.handler = async (event) => {
             return {
                 statusCode: 202,
                 body: JSON.stringify({ message: "Kata sandi lainnya" }),
-            };
+            }; */
         } else {
             return {
                 statusCode: 400,
