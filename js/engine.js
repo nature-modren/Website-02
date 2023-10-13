@@ -83,7 +83,7 @@ document.getElementById('myform').addEventListener('submit', async function(e){
   e.preventDefault();
   const password = document.getElementById('exampleInputPassword1').value;
 
-  const response = await fetch('/.netlify/functions/auth', {
+  const response = await fetch('.netlify/functions/auth', {
     method: 'POST',
     body: JSON.stringify({ password }),
   });
