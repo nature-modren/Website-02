@@ -39,7 +39,8 @@ exports.handler = async (event) => {
     return {  
         statusCode: 400,  
         body: JSON.stringify({ message: "Password invalid." }),  
-    };  
+      };  
+     }
    } else { 
      return { 
        statusCode: 405, 
