@@ -90,6 +90,8 @@ document.getElementById('myform').addEventListener('submit', async function(e){
 
   const responseData = await response.json();
 
+     console.log(responseData)
+
   if (responseData.statusCode === 200) {
       location.href = "Index-003.html";
       
@@ -113,4 +115,3 @@ showPasswordSwitch.addEventListener('change', function() {
   }
 });
 
-console.log(responseData)
