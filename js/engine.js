@@ -91,14 +91,15 @@ document.getElementById('myform').addEventListener('submit', async function(e){
   const responseData = await response.json();
 
   if (response.ok) {
-    if (responseData.message === ":v ada ada saja beliau ini") {
-      Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
-    } else {
       location.href = "Index-003.html";
-    }
+      
+    } else if (responseData.message === ":v ada ada saja beliau ini") {
+ 
+Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
   } else {
     Swal.fire('Password Salah!', responseData.message, 'error');
   }
+
 });
 
 const passwordField = document.getElementById('exampleInputPassword1');
