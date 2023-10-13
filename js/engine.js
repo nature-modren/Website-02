@@ -90,10 +90,10 @@ document.getElementById('myform').addEventListener('submit', async function(e){
 
   const responseData = await response.json();
 
-  if (responseData.statusCode === "200") {
+  if (responseData.statusCode === 200) {
       location.href = "Index-003.html";
       
-    } else if (responseData.statusCode === "201") {
+    } else if (responseData.statusCode === 201) {
  
 Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
   } else {
