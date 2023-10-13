@@ -17,7 +17,7 @@ exports.handler = async (event) => {
   
      const password = requestBody.password; 
      
-     if (password === "12345678") { 
+     if (password === 12345678) { 
        setLoggedInCookie()
        return { 
          statusCode: 200, 
