@@ -8,13 +8,13 @@ exports.handler = async (event) => {
         if (password === "12345678") {
             return {
                 statusCode: 200,
-                body: JSON.stringify({ message: "Password valid" }),
+                body: JSON.stringify({ message: 200 }),
             };
         } else if (password === "friend") {
             
             return {
                 statusCode: 201,
-                body: JSON.stringify({ message: ":v ada ada saja beliau ini" }),
+                body: JSON.stringify({ message: 201 }),
             };
         } else if (password === "password3") {
             
