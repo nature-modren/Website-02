@@ -112,3 +112,5 @@ showPasswordSwitch.addEventListener('change', function() {
     passwordField.type = 'password';
   }
 });
+
+console.log(responseData)
