@@ -90,7 +90,7 @@ document.getElementById('myform').addEventListener('submit', async function(e){
 
   const responseData = await response.json();
 
-  if (responseData.statusCode === 200) {
+  if (response.ok) {
       location.href = "Index-003.html";
       
     } else if (responseData.statusCode === 201) {
