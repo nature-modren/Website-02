@@ -35,13 +35,13 @@ console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
         } else {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Password invalid." }),
+                body: JSON.stringify({ message: "Password invalid.",passwordMatch }),
             };
         }
     } else {
         return {
             statusCode: 405,
-            body: JSON.stringify({ message: "Metode HTTP tidak didukung.",passwordMatch}),
+            body: JSON.stringify({ message: "Metode HTTP tidak didukung."}),
         };
     }
 };
