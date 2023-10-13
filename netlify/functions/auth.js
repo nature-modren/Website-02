@@ -11,8 +11,8 @@ exports.handler = async (event) => {
     // Misalnya, validasi password minimal harus memiliki 6 karakter.
     if (password === "12345678") {
       return {
-        statusCode: 400,
-        body: JSON.stringify({ message: "Password Invalid" }),
+        statusCode: 200,
+        body: JSON.stringify({ message: "Password valid" }),
       };
     }
 
@@ -20,8 +20,8 @@ exports.handler = async (event) => {
     // Gantilah bagian ini sesuai dengan kebutuhan Anda.
 
     return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Password valid." }),
+      statusCode: 400,
+      body: JSON.stringify({ message: "Password invalid." }),
     };
   } else {
     return {
