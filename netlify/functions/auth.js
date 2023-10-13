@@ -13,7 +13,7 @@ const hashedPassword = process.env.HASHED_PASSWORD;
 console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
 
 
-   const passwordMatch = await bcrypt.compare(password, hashedPassword);
+   const passwordMatch = await bcrypt.compare(password,hashedPassword);
 
         if (passwordMatch) {
             return {
@@ -35,7 +35,7 @@ console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
         } else {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword }),
+                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password }),
             };
         }
     } else {
