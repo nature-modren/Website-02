@@ -35,7 +35,7 @@ console.log("HASHED_PASSWORD:", hashedPassword); // Tambahkan baris ini
         } else {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password }),
+                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password ,bcrypt }),
             };
         }
     } else {
