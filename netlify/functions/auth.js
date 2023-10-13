@@ -27,7 +27,7 @@ exports.handler = async (event) => {
      } else if (password === "friend") {
        // Jika password adalah "friend", tampilkan pesan "hi"
        return { 
-         statusCode: 200, 
+         statusCode: 201, 
          body: JSON.stringify({ message: ":v ada ada saja beliau ini" }), 
        }; 
      } else { 
