@@ -9,10 +9,10 @@ exports.handler = async (event) => {
     const password = requestBody.password;
 
     // Misalnya, validasi password minimal harus memiliki 6 karakter.
-    if (password.length < 6) {
+    if (password === "12345678") {
       return {
         statusCode: 400,
-        body: JSON.stringify({ message: "Password harus memiliki minimal 6 karakter." }),
+        body: JSON.stringify({ message: "Password Invalid" }),
       };
     }
 
