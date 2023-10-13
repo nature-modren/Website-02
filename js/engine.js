@@ -102,9 +102,12 @@ function setLoggedInCookie() {
 
      console.log(responseData)
 
-  if (responseData.message === 200) {
+  if (responseData.message === 200) {     
+      setLoggedInCookie();
       location.href = "Index-003.html";
       
+
+
     } else if (responseData.message === 201) {
  
 Swal.fire('Hi!', 'Pesan: ada ada saja beliau ini kwkw', 'success');
