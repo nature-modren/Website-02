@@ -17,7 +17,7 @@ const hashedPassword = process.env.HASHED_PASSWORD;
                 statusCode: 200,
                 body: JSON.stringify({ message: 200 }),
             };
-        / *} else if (password === "friend") {
+        } else if (password === "friend") {
             
             return {
                 statusCode: 201,
@@ -28,7 +28,7 @@ const hashedPassword = process.env.HASHED_PASSWORD;
             return {
                 statusCode: 202,
                 body: JSON.stringify({ message: "Kata sandi lainnya" }),
-            }; */
+            };
         } else {
             return {
                 statusCode: 400,
