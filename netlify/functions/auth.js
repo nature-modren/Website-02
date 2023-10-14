@@ -1,26 +1,12 @@
 //build serverless netlify
 
-
-bcrypt = require('bcrypt');
-
 exports.handler = async (event) => {
     if (event.httpMethod === "POST") {
         const requestBody = JSON.parse(event.body);
         const password = requestBody.password;
 
-const passwordToHash = password; // Kata sandi yang ingin Anda hash
-const saltRounds = 10; // Jumlah putaran salt (biasanya antara 10-12)
 
-// Menghasilkan salt
-const salt = bcrypt.genSaltSync(saltRounds);
-
-// Menghasilkan hash kata sandi dengan salt
-const passPassword = bcrypt.hashSync(passwordToHash, salt);
-
-const hashedPassword = process.env.HASHED_PASSWORD;
-passwordMatch = await bcrypt.compare(passPassword,hashedPassword)
-   
-        if (passwordMatch) {
+        if (password === "password3" || password === "Password3") {
             return {
                 statusCode: 200,
                 body: JSON.stringify({ message: 200 }),
