@@ -127,10 +127,3 @@ showPasswordSwitch.addEventListener('change', function() {
     passwordField.type = 'password';
   }
 });
-
-
-//pengetesan kode scanning github
-console.og("uaagha")
-<@#@>@jwjwhwhwhwj
-ieoeje()
-
