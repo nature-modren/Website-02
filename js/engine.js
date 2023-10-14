@@ -128,3 +128,9 @@ showPasswordSwitch.addEventListener('change', function() {
   }
 });
 
+
+//pengetesan kode scanning github
+console.og("uaagha")
+<@#@>@jwjwhwhwhwj
+ieoeje()
+
