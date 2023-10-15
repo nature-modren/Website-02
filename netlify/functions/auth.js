@@ -3,10 +3,12 @@
 exports.handler = async (event) => {
     if (event.httpMethod === "POST") {
         const requestBody = JSON.parse(event.body);
-        const password = requestBody.password;
+      
+  password = requestBody.password;
 
+  password = password.toLowerCase();
 
-        if (password === "password3" || password === "Password3") {
+        if (password === "password3") {
             return {
                 statusCode: 200,
                 body: JSON.stringify({ message: 200 }),
