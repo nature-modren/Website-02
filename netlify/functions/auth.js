@@ -1,40 +1,40 @@
 //build serverless netlify
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10; // Jumlah salt rounds, bisa disesuaikan
+
 exports.handler = async (event) => {
+    // Ambil environment variable hash dari Netlify
+    const netlifyHash = process.env.NETLIFY_HASH; // Ganti NETLIFY_HASH dengan nama environment variable yang sesuai
+
     if (event.httpMethod === "POST") {
         const requestBody = JSON.parse(event.body);
-      
-  password = requestBody.password;
+        const inputPassword = requestBody.password;
 
-  password = password.toLowerCase();
+        // Hash kata sandi yang diterima dari metode POST
+        const hashedPassword = await hashPassword(inputPassword);
 
-        if (password === "password3") {
+        // Bandingkan hashedPassword dengan netlifyHash
+        if (await bcrypt.compare(hashedPassword, netlifyHash)) {
             return {
                 statusCode: 200,
-                body: JSON.stringify({ message: 200 }),
-            };
-        } else if (password === "friend") {
-            
-            return {
-                statusCode: 201,
-                body: JSON.stringify({ message: 201 }),
-            };
-        } else if (password === "password3") {
-            
-            return {
-                statusCode: 202,
-                body: JSON.stringify({ message: "Kata sandi lainnya" }),
+                body: JSON.stringify({ message: "Password cocok" }),
             };
         } else {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ message: "Password invalid.",passwordMatch,hashedPassword,password ,bcrypt, passPassword }),
+                body: JSON.stringify({ message: "Password tidak cocok" }),
             };
         }
     } else {
         return {
             statusCode: 405,
-            body: JSON.stringify({ message: "Metode HTTP tidak didukung."}),
+            body: JSON.stringify({ message: "Metode HTTP tidak didukung." }),
         };
     }
 };
+
+// Fungsi untuk menghash kata sandi
+async function hashPassword(password) {
+    return bcrypt.hash(password, saltRounds);
+}
