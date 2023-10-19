@@ -1,4 +1,4 @@
-//build serverless netlify Version
+//build serverless netlify
 
 
 const bcrypt = require('bcrypt');
