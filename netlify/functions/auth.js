@@ -11,7 +11,7 @@ exports.handler = async (event) => {
         const input = password.toLowerCase();
 
         try {
-            const passwordMatch = await bcrypt.compare(input, hashedPassword);
+            const passwordMatch = await bcrypt.compare(password, hashedPassword);
 
             if (passwordMatch) {
                 return {
