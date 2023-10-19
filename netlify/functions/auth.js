@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   input = password.toLowerCase();
 
 
-  passwordMatch = bcrypt.compare(input,hashedPassword);
+  passwordMatch = await bcrypt.compare(input,hashedPassword);
 
         if (passwordMatch) {
             return {
