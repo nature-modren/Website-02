@@ -1,12 +1,16 @@
+
 {
-  "name": "project-002",
+  "name": "Project-002",
   "version": "1.0.0",
-  "description": "modren website",
+  "description": "Future website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm install && npm run build"
   },
   "dependencies": {
-    "bcrypt": "^5.1.1"
-  }
+    "bcryptjs": "^2.4.3"
+  },
+  "author": "Nama Anda",
+  "license": "MIT"
 }
