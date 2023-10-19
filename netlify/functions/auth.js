@@ -18,7 +18,7 @@ exports.handler = async (event) => {
         if (passwordMatch) {
             return {
                 statusCode: 200,
-                body: JSON.stringify({ message: 200 ,passwordMatch,bcrypt, password}),
+                body: JSON.stringify({ message: 200 ,passwordMatch,bcrypt, password,input}),
             };
         } else if (password === "friend") {
             
