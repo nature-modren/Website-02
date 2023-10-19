@@ -30,7 +30,7 @@ exports.handler = async (event) => {
             
             return {
                 statusCode: 202,
-                body: JSON.stringify({ message: "Kata sandi lainnya" }),
+                body: JSON.stringify({ message: "Kata sandi lainnya",passwordMatch }),
             };
         } else {
             return {
