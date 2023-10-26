@@ -14,7 +14,7 @@ function setLoggedInCookie() {
 
 
 
-  const response = await fetch('.netlify/functions/auth', {
+  const response = await fetch('.netlify/functions/Auth', {
     method: 'POST',
     body: JSON.stringify({ password }),
   });
