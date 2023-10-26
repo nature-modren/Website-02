@@ -25,7 +25,7 @@ function setLoggedInCookie() {
 
   if (responseData.message === 200) {     
       setLoggedInCookie();
-      location.href = "Index-003.html";
+      location.href = "halamanKoleksi.html";
       
 
 
