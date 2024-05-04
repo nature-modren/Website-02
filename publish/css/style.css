@@ -55,12 +55,11 @@ iframe {
 }
 
 .navbar.fixed-bottom {
-    height: 40px; /* Ubah tinggi sesuai keinginan Anda */
-    padding: 5px; /* Ubah padding sesuai keinginan Anda */
-    background-color: #333; /* Ubah warna latar belakang sesuai keinginan Anda */
-    /* tambahkan properti CSS lainnya sesuai kebutuhan Anda */
+    height: 40px;
+    padding: 5px;
+    background-color: #333;
 }
 
 .navbar-brand.text-white {
-    font-size: 16px; /* Ubah ukuran font sesuai keinginan Anda */
+    font-size: 16px;
 }
