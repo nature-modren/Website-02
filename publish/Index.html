@@ -1,205 +1,76 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <title>Website Biograpy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
-  <body>
-    <!-- awal header -->
-    <nav class="navbar navbar-dark bg-dark fixed-top mb-40">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Nature Company</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-dark"
-          tabindex="-1"
-          id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Menu pilihan
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="Index-002.html"
-                  >Tentang saya</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="Index-003.html"
-                  >Koleksi musik saya</a
-                >
-              </li>
-            </ul>
+  <body class="h-screen">
+    <div class="panelAtas">
+      <nav class="p-5">
+        <div class="container mx-10">
+          <div class="flex justify-between items-center">
+            <div class="flex flex-shrink-0 text-black mr-6">
+              <span class="flex font-semibold tracking-tight"
+                >AMRI FIRDAUS</span
+              >
+            </div>
+            <div class="hidden lg:flex flex-grow justify-end">
+              <a
+                href="Index.html"
+                id="tautan1"
+                class="navtext1 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >BERANDA</a
+              >
+              <a
+                href="koleksi.html"
+                id="tautan2"
+                class="nav text2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >KOLEKSI</a
+              >
+              <a
+                href="kontak.html"
+                id="tautan3"
+                class="navtext3 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200"
+                >KONTAK</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-
-    <!-- akhir header -->
-
-    <!-- awal jumbotron -->
-
-    <div class="mt-4 mb-4 bg-secondary">
-      <div
-        class="jumbotron d-flex bg-secondary text-center justify-content-center align-items-center center"
-        style="width: 1400px; height: 400px"
-      >
-        <div
-          class="container shadow-lg"
-          style="width: 300px; background-color: #ffffff"
-        >
-          <img
-            src="img/gambar-001.jpg"
-            alt=""
-            width="200px"
-            class="img-fluid rounded-2"
-          />
-        </div>
-      </div>
-    </div>
-    <!-- akhir jumbotron -->
-
-    <!-- awal about -->
-    <section class="text-center mb-6 mt-6 shadow-lg">
-      <section class="card">
-        <p class="card-body fw-bold fs-5">
-          Hai semua nya selamat datang di website biografi saya, perkenalkan
-          saya Amri Firdaus seorang programer web pemula yang terus belajar
-          mengenai dunia komputer
-        </p>
-      </section>
-    </section>
-
-    <!-- akhir about -->
-
-    <!-- awal Quote -->
-
-    <div class="card">
-      <div class="card-header">pengenalan bidang pembelajaran</div>
-      <div class="card-body">
-        <blockquote class="fw-light blockquote mb-0">
-          <p>
-            untuk saya ini saya mempelajari pemograman web secara otodidak untuk
-            hobi, untuk bahasa pemograman yang saya pelajari adalah Html,css,dan
-            javascrip
-          </p>
-          <footer class="blockquote-footer">
-            <cite title="Source Title">20/04/2024</cite>
-          </footer>
-        </blockquote>
-      </div>
-
-      <hr />
-
-      <div class="card-header">Quote</div>
-      <div class="card-body">
-        <blockquote class="fw-light blockquote mb-0">
-          <p>tetap semangat dan jangan menyerah</p>
-          <footer class="blockquote-footer">
-            <cite title="Source Title">20/04/202</cite>
-          </footer>
-        </blockquote>
-      </div>
-      <div class="card-footer"></div>
+      </nav>
     </div>
 
-    <!-- akhir Quote -->
-
-    <!-- awal kartu  -->
-
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="">
-        <div class="card text-center mb-3" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Mau kasih saran?</h5>
-            <p class="card-text">
-              Mau kasih masukan/saran? silakan klik tombol ini :)
-            </p>
-            <a href="Index-002.html" class="btn btn-primary">Tentang saya</a>
-          </div>
-        </div>
-
-        <br />
-
-        <div class="card text-center mb-3" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Mau lihat koleksi lagu ku?</h5>
-            <p class="card-text">
-              Yuk kunjungi lihat lagu lagu kesukaan ku klik tombol di bawah ini
-              ya :]
-            </p>
-            <a href="halamanLogin.html" class="btn btn-primary">koleksi lagu</a>
-          </div>
-        </div>
-
-        <br />
-
-        <div
-          class="card border-danger mb-3 text-center"
-          style="max-width: 18rem"
-        >
-          <div class="card-header text-center">PERINGATAN</div>
-          <div class="card-body text-danger">
-            <h5 class="card-title text center">tentang halaman</h5>
-            <p class="card-text">
-              halaman ini masih ngebug pada mode GELAP dan ngebug pada beberapa
-              perangkat ,tapi jangan khawatir saya akan terus mengupdate halaman
-              ini agar tetap keren dan sedikit berguna(wkwk):v
-            </p>
-          </div>
-        </div>
+    <div class="dashboard flex justify-center items-center flex-col">
+      <div class="content text-center mb-5">
+        <p id="text-animasi" class="typing text-2xl font-mono"></p>
       </div>
+      <img
+        src="gambar-pemandangan.jpg"
+        alt="gambar gagal di tampilkan oleh browser"
+        class="picture w-2/3 rounded-lg shadow-lg"
+      />
+      <p class="text-wrap mt-3">
+        salam sehat semua nya, pada halaman ini saya akan membagikan cerita saya
+        dalam menjalani karier sebagai web developer
+      </p>
     </div>
 
-    <!-- akhir kartu -->
-
-    <!-- awal footer -->
-    <nav class="navbar fixed-bottom bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white text-center" href="#"
-          >&copy Amri firdaus 2023</a
-        >
-      </div>
-    </nav>
-    <!-- akhir footer -->
-
-    <script src="js/engine.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <footer
+      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white w-full h-16 bg-gray-800"
+    >
+      <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
