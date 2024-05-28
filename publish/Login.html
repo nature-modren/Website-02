@@ -1,107 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Halaman Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
-         <link rel="shortcut icon" href="img/Favicon.png">        
-          <link rel="stylesheet" href="css/bootstrap.min.css" />    
-           <link rel="stylesheet" href="css/custom.css">   
-    
-</head>
-<body class="">
-
-   <!-- awal header -->    
-   <nav class="navbar navbar-dark bg-dark fixed-top mb-40">   
-     <div class="container-fluid">   
-       <a class="navbar-brand" href="#">Nature Profil</a>   
-       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">   
-         <span class="navbar-toggler-icon"></span>   
-       </button>   
-       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">   
-         <div class="offcanvas-header">   
-           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu pilihan</h5>   
-           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>   
-         </div>   
-         <div class="offcanvas-body">   
-           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">   
-             <li class="nav-item">   
-               <a class="nav-link active" aria-current="page" href="Index.html">Home</a>   
-             </li>   
-           <li class="nav-item">   
-               <a class="nav-link active" aria-current="page" href="halamanSaran.html">Tentang saya</a>   
-             </li>   
-             </li>   
-           <li class="nav-item">   
-               <a class="nav-link active" aria-current="page" href=halamanKoleksi.html">Koleksi musik saya</a>   
-             </li>   
-           </ul>   
-  
-         </div>   
-       </div>   
-     </div>   
-   </nav>   
-  
-  
-        <!-- akhir header -->    
- 
-
-
-
-
-
-
-
-  <div class="container-fluid ">
-    <div class="row parent d-flex justify-content-center align-items-center p-4" style="min-height:100vh">
-        <div class="child col-md-4 border p-4 bg-light border-dark border-2">
-            <form id="myform" name="daftar pengunjung" method="post"
-            data-netlify="true"class="">
-  <div class="mb-3">
-      <p class="text-center fs-3">Authentication Page</p>
- </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
-       <div id="nameHelp" class="form-text">Password diberikan secara invite</div>
-
-<div class="form-check form-switch mt-2">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Lihat password</label>
-</div>
-  </div>
-
-  <div class="d-grid ">
-  <button type="submit" onclick="" class="btn btn-primary btn-block ">Kirim</button>
-</div>
-</form>
- 
- <br>
- 
-  <div class="card border-dark mb-3 text-bg-danger" style="max-width: 18rem;">
-  <div class="card-header text-center">FORBIDDEN 403</div>
-  <div class="card-body text-center">
-    <h2 class="card-title ">PERINGATAN</h2>
-    <p class="card-text">kamu tidak memiliki izin untuk masuk</p>
-  </div>
-</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/Favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="">
+    <!-- awal header -->
+    <nav class="navbar navbar-dark bg-dark fixed-top mb-40">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Nature Profil</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Menu pilihan
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Saran.html"
+                  >Tentang saya</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="Koleksi.html"
+                  >Koleksi musik saya</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </nav>
+
+    <!-- akhir header -->
+
+    <div class="container-fluid">
+      <div
+        class="row parent d-flex justify-content-center align-items-center p-4"
+        style="min-height: 100vh"
+      >
+        <div class="child col-md-4 border p-4 bg-light border-dark border-2">
+          <form
+            id="myform"
+            name="daftar pengunjung"
+            method="post"
+            data-netlify="true"
+            class=""
+          >
+            <div class="mb-3">
+              <p class="text-center fs-3">Authentication Page</p>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+              <div id="nameHelp" class="form-text">
+                Password diberikan secara invite
+              </div>
+
+              <div class="form-check form-switch mt-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >Lihat password</label
+                >
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button
+                type="submit"
+                onclick=""
+                class="btn btn-primary btn-block"
+              >
+                Kirim
+              </button>
+            </div>
+          </form>
+
+          <br />
+
+          <div
+            class="card border-dark mb-3 text-bg-danger"
+            style="max-width: 18rem"
+          >
+            <div class="card-header text-center">FORBIDDEN 403</div>
+            <div class="card-body text-center">
+              <h2 class="card-title">PERINGATAN</h2>
+              <p class="card-text">kamu tidak memiliki izin untuk masuk</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-   </div> 
 
-<br>
-<br>
+    <br />
+    <br />
 
-        <!-- awal footer -->    
-         <nav class="navbar fixed-bottom bg-dark  " >    
-      <div class="container-fluid">    
-        <a class="navbar-brand text-white text-center" href="#">&copy Amri firdaus 2023</a>    
-      </div>    
-    </nav>    
-         <!-- akhir footer -->   
+    <!-- awal footer -->
+    <nav class="navbar fixed-bottom bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white text-center" href="#"
+          >&copy Amri firdaus 2023</a
+        >
+      </div>
+    </nav>
+    <!-- akhir footer -->
 
-        <script src="js/engine.js"></script>
-        <script src="js/bootstrap.min.js"></script>    
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
-</body>
+    <script src="js/engine.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
