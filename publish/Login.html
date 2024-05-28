@@ -1,79 +1,62 @@
-<!DOCTYPE html>
-<html lang="id">
+<<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Halaman Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/Favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Website Biograpy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
-  <body class="">
-    <!-- awal header -->
-    <nav class="navbar navbar-dark bg-dark fixed-top mb-40">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Nature Profil</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-dark"
-          tabindex="-1"
-          id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Menu pilihan
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Saran.html"
-                  >Tentang saya</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="Koleksi.html"
-                  >Koleksi musik saya</a
-                >
-              </li>
-            </ul>
+
+  <body class="h-screen">
+    <div class="panelAtas">
+      <nav class="p-5">
+        <div class="container mx-10">
+          <div class="flex justify-between items-center">
+            <div class="flex flex-shrink-0 text-black mr-6">
+              <span class="flex font-semibold tracking-tight"
+                >AMRI FIRDAUS</span
+              >
+            </div>
+            <div class="hidden lg:flex flex-grow justify-end">
+              <a
+                href="Index.html"
+                id="tautan1"
+                class="navtext1 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >BERANDA</a
+              >
+              <a
+                href="koleksi.html"
+                id="tautan2"
+                class="nav text2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >KOLEKSI</a
+              >
+              <a
+                href="kontak.html"
+                id="tautan3"
+                class="navtext3 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200"
+                >KONTAK</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-
+      </nav>
+    </div>
     <!-- akhir header -->
 
-    <div class="container-fluid">
-      <div
-        class="row parent d-flex justify-content-center align-items-center p-4"
-        style="min-height: 100vh"
-      >
-        <div class="child col-md-4 border p-4 bg-light border-dark border-2">
+    <div class="container mx-auto">
+      <div class="flex justify-center items-center p-4 min-h-screen">
+        <div
+          class="child w-full max-w-md border p-4 bg-white border-gray-800 border-2"
+        >
           <form
             id="myform"
             name="daftar pengunjung"
@@ -81,74 +64,72 @@
             data-netlify="true"
             class=""
           >
-            <div class="mb-3">
-              <p class="text-center fs-3">Authentication Page</p>
+            <div class="mb-3 text-center">
+              <p class="text-xl font-semibold">Authentication Page</p>
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
+              <label
+                for="exampleInputPassword1"
+                class="block text-sm font-medium text-gray-700"
                 >Password</label
               >
               <input
                 name="password"
                 type="password"
-                class="form-control"
+                class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 id="exampleInputPassword1"
               />
-              <div id="nameHelp" class="form-text">
+              <div id="nameHelp" class="text-sm text-gray-500 mt-1">
                 Password diberikan secara invite
               </div>
-
-              <div class="form-check form-switch mt-2">
+              <div class="flex items-center mt-2">
                 <input
-                  class="form-check-input"
+                  class="form-check-input h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckDefault"
                 />
-                <label class="form-check-label" for="flexSwitchCheckDefault"
+                <label
+                  class="form-check-label ml-2 text-sm text-gray-700"
+                  for="flexSwitchCheckDefault"
                   >Lihat password</label
                 >
               </div>
             </div>
-
             <div class="d-grid">
               <button
                 type="submit"
                 onclick=""
-                class="btn btn-primary btn-block"
+                class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >
                 Kirim
               </button>
             </div>
           </form>
-
           <br />
-
           <div
-            class="card border-dark mb-3 text-bg-danger"
-            style="max-width: 18rem"
+            class="card border-gray-800 mb-3 bg-red-500 text-white max-w-xs mx-auto"
           >
-            <div class="card-header text-center">FORBIDDEN 403</div>
+            <div class="card-header text-center font-semibold">
+              FORBIDDEN 403
+            </div>
             <div class="card-body text-center">
-              <h2 class="card-title">PERINGATAN</h2>
+              <h2 class="card-title text-xl font-semibold">PERINGATAN</h2>
               <p class="card-text">kamu tidak memiliki izin untuk masuk</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <br />
     <br />
 
     <!-- awal footer -->
-    <nav class="navbar fixed-bottom bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white text-center" href="#"
-          >&copy Amri firdaus 2023</a
-        >
-      </div>
-    </nav>
+    <footer
+      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white w-full h-16 bg-gray-800"
+    >
+      <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
+    </footer>
     <!-- akhir footer -->
 
     <script src="js/main.js"></script>
