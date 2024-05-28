@@ -1,111 +1,128 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Tentang Saya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Biograpy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="panelAtas">
+      <nav class="p-6">
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center">
+            <div class="flex flex-shrink-0 text-black mr-6">
+              <span class="flex font-semibold tracking-tight"
+                >AMRI FIRDAUS</span
+              >
+            </div>
 
-    <link rel="shortcut icon" href="img/Favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-<body>
-    
-   <!-- awal header --> 
-<nav class="navbar navbar-dark bg-dark fixed-top mb-40">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Nature Profil</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu pilihan</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="halamanSaran.html">Tentang saya</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="halamanLogin.html">Koleksi musik saya</a>
-          </li>
-        </ul>
-      </div>
+            <div class="hidden lg:block">
+              <a
+                href="Index.html"
+                id="tautan1"
+                class="navtext1 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >BERANDA</a
+              >
+              <a
+                href="koleksi.html"
+                id="tautan2"
+                class="navtext2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >KOLEKSI</a
+              >
+              <a
+                href="kontak.html"
+                id="tautan3"
+                class="navtext3 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200"
+                >KONTAK</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </div>
-</nav>
-  
-     <!-- akhir header --> 
-  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
-    
-    
-    
-    <!-- awal section -->
-      
- 
-   <div class="container badan">
-       
-      <div class="row">
-        <div class="col padding-100">
-          <h1>Kontak saya</h1>
-          <p>
-            Dibawah ini adalah formulir untuk menghubungi saya. Silahkan isi kolom yang tersedia, termasuk alamat email (opsional), dan tinggalkan pesan Anda. Kami sangat menghargai masukan dan saran Anda. Jika Anda ingin tetap anonim, Anda bisa memasukkan data secara acak. Terima kasih atas kontribusi Anda! :) -Amri
+    <div class="container badan">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-10">
+          <h1 class="text-3xl font-bold">Kontak saya</h1>
+          <p class="mt-4">
+            Dibawah ini adalah formulir untuk menghubungi saya. Silahkan isi
+            kolom yang tersedia, termasuk alamat email (opsional), dan
+            tinggalkan pesan Anda. Kami sangat menghargai masukan dan saran
+            Anda. Jika Anda ingin tetap anonim, Anda bisa memasukkan data secara
+            acak. Terima kasih atas kontribusi Anda! :) -Amri
           </p>
         </div>
- 
-        <div class="col peding-30">
-          <form method="post" data-netlify="true" netlify>
-             
+
+        <div class="p-10">
+          <form method="post" action="#" class="space-y-4">
             <div class="form-group">
-              <label for="">Nama Anda:</label>
-              <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama">
+              <label for="nama" class="block font-semibold">Nama Anda:</label>
+              <input
+                type="text"
+                id="nama"
+                class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                name="nama"
+                placeholder="Masukkan Nama"
+              />
             </div>
- 
+
             <div class="form-group">
-              <label for="">E-mail Anda:</label>
-              <input type="email" class="form-control" name="email" placeholder="Masukkan Email">
+              <label for="email" class="block font-semibold"
+                >E-mail Anda:</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                name="email"
+                placeholder="Masukkan Email"
+              />
             </div>
- 
+
             <div class="form-group">
-              <label for="">Pesan Anda:</label>
-              <textarea name="pesan" class="form-control" cols="30" rows="7"></textarea>
+              <label for="pesan" class="block font-semibold">Pesan Anda:</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                class="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                rows="5"
+                placeholder="Tulis pesan Anda di sini..."
+              ></textarea>
             </div>
- 
-<p>
-<div data-netlify-recaptcha="true"></div>
-</p>
-            <button class="btn btn-primary btn-block btn-lg" type="submit" value="Kirim">KIRIM</button>
- 
+
+            <div class="form-group">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+
+            <button
+              class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300"
+              type="submit"
+              value="Kirim"
+            >
+              KIRIM
+            </button>
           </form>
         </div>
       </div>
- 
     </div>
-    
-    <!-- akhir section-->
-     <br>
-     <br>
-     <br>
-    
-     <!-- awal footer -->
-     <nav class="navbar fixed-bottom bg-dark mt-4 " >
-  <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">&copy Amri firdaus 2023</a>
-  </div>
-</nav>
-     <!-- akhir footer -->
-     
-    <script src="js/bootstrap.min.js"></script>
-</body>
+
+    <footer
+      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white"
+    >
+      <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+  </body>
 </html>
