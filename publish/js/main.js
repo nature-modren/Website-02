@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   if (!checkLoginStatus()) {
     // Jika pengguna belum login, alihkan ke halaman login atau tampilkan pesan.
-    location.href = "halamanLogin.html"; // Ganti dengan halaman login yang sesuai.
+    location.href = "Login.html"; // Ganti dengan halaman login yang sesuai.
   }
 });
 
