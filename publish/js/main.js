@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    const text = "Hai semua saya Amri Firdaus, seorang Web developer";
+    const text = "Hai semua saya Amri Firdaus, seorang Web Developer";
     let index = 0;
     const speedketik = 100;
 
