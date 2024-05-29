@@ -129,5 +129,5 @@ hr {
 }
 
 .picture {
-  object-fit: cover; /* atau 'contain' jika ingin seluruh gambar terlihat tanpa dipotong */
+  object-fit: contain; /*cover atau 'contain' jika ingin seluruh gambar terlihat tanpa dipotong */
 }
