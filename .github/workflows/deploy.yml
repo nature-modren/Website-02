@@ -1,0 +1,17 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main  # Ganti 'main' dengan nama branch yang ingin Anda pantau
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Netlify
+        run: curl -X POST -d '{}'https://api.netlify.com/build_hooks/6522d4e51c0751509062e463
