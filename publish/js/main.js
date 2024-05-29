@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   try {
-    document
-      .getElementById("myform")
-      .addEventListener("submit", async function (e) {
+    const form = document.getElementById("myform");
+    const passwordField = document.getElementById("exampleInputPassword1");
+    const showPasswordSwitch = document.getElementById(
+      "flexSwitchCheckDefault"
+    );
+    const textElement = document.getElementById("text-animasi");
+
+    if (form) {
+      form.addEventListener("submit", async function (e) {
         e.preventDefault();
-        const password = document.getElementById("exampleInputPassword1").value;
+        const password = passwordField.value;
 
         function setLoggedInCookie() {
           const expirationDate = new Date();
@@ -15,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const response = await fetch(".netlify/functions/Auth", {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({ password }),
         });
 
@@ -31,37 +40,35 @@ document.addEventListener("DOMContentLoaded", function () {
           Swal.fire("Password Salah!", responseData.message, "error");
         }
       });
+    }
+
+    if (showPasswordSwitch && passwordField) {
+      showPasswordSwitch.addEventListener("change", function () {
+        passwordField.type = showPasswordSwitch.checked ? "text" : "password";
+      });
+    }
+
+    const text = "Hai semua saya Amri Firdaus, seorang Web developer";
+    let index = 0;
+    const speedketik = 100;
+
+    function ketik() {
+      if (index < text.length) {
+        textElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(ketik, speedketik);
+      }
+    }
+
+    if (textElement) {
+      ketik();
+    }
+
+    console.log(
+      "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
+      "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
+    );
   } catch (error) {
     console.log(error);
   }
-
-  const passwordField = document.getElementById("exampleInputPassword1");
-  const showPasswordSwitch = document.getElementById("flexSwitchCheckDefault");
-
-  showPasswordSwitch.addEventListener("change", function () {
-    if (showPasswordSwitch.checked) {
-      passwordField.type = "text";
-    } else {
-      passwordField.type = "password";
-    }
-  });
-
-  const text = "Hai semua saya Amri Firdaus, seorang Web developer";
-  let index = 0;
-  const speedketik = 100;
-
-  function ketik() {
-    if (index < text.length) {
-      document.getElementById("text-animasi").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(ketik, speedketik);
-    }
-  }
-
-  ketik();
-
-  console.log(
-    "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
-    "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
-  );
 });
