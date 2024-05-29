@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to Netlify
-        run: curl -X POST -d '{}'https://api.netlify.com/build_hooks/6522d4e51c0751509062e463
+        run: curl -X POST -d '{https://api.netlify.com/build_hooks/6522d4e51c0751509062e463}'
