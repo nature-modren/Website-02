@@ -128,6 +128,7 @@ hr {
   }
 }
 
-.picture {
-  object-fit: contain; /*cover atau 'contain' jika ingin seluruh gambar terlihat tanpa dipotong */
+/* .picture {
+  object-fit: contain; cover atau 'contain' jika ingin seluruh gambar terlihat tanpa dipotong 
 }
+*/
