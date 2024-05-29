@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Biography</title>
@@ -14,67 +14,116 @@
     />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="icon" href="img/Favicon.png" type="image/x-icon" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="panelAtas">
-        <nav class="p-6">
-            <div class="container mx-auto">
-                <div class="flex justify-between items-center">
-                    <div class="flex flex-shrink-0 text-black mr-6">
-                        <span class="flex font-semibold tracking-tight">AMRI FIRDAUS</span>
-                    </div>
-                    <div class="hidden lg:block">
-                        <a href="Index.html" id="tautan1" class="navtext1 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2">BERANDA</a>
-                        <a href="Koleksi.html" id="tautan2" class="navtext2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2">KOLEKSI</a>
-                        <a href="Saran.html" id="tautan3" class="navtext3 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200">KONTAK</a>
-                    </div>
-                </div>
+      <nav class="p-5">
+        <div class="container mx-10">
+          <div class="flex justify-between items-center">
+            <div class="flex flex-shrink-0 text-black mr-6">
+              <span class="flex font-semibold tracking-tight"
+                >AMRI FIRDAUS</span
+              >
             </div>
-        </nav>
+            <div
+              class="flex-grow flex justify-end space-x-2 lg:space-x-4 lg:flex-nowrap"
+            >
+              <a
+                href="Index.html"
+                id="tautan1"
+                class="navtext1 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >BERANDA</a
+              >
+              <a
+                href="koleksi.html"
+                id="tautan2"
+                class="nav text2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                >KOLEKSI</a
+              >
+              <a
+                href="Saran.html"
+                id="tautan3"
+                class="navtext3 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200"
+                >KONTAK</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
 
     <div class="container badan">
-        <div class="grid grid-cols-2 gap-4">
-            <div class="p-10">
-                <h1 class="text-3xl font-bold">Kontak saya</h1>
-                <p class="mt-4">
-                    Dibawah ini adalah formulir untuk menghubungi saya. Silahkan isi kolom yang tersedia, termasuk alamat email (opsional), dan tinggalkan pesan Anda. Kami sangat menghargai masukan dan saran Anda. Jika Anda ingin tetap anonim, Anda bisa memasukkan data secara acak. Terima kasih atas kontribusi Anda! :) -Amri
-                </p>
-            </div>
-
-            <div class="p-10">
-                <form method="post" action="#" class="space-y-4" data-netlify="true">
-                    <div class="form-group">
-                        <label for="nama" class="block font-semibold">Nama Anda:</label>
-                        <input type="text" id="nama" class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" name="nama" placeholder="Masukkan Nama" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="block font-semibold">E-mail Anda:</label>
-                        <input type="email" id="email" class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" name="email" placeholder="Masukkan Email" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pesan" class="block font-semibold">Pesan Anda:</label>
-                        <textarea id="pesan" name="pesan" class="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <div data-netlify-recaptcha="true"></div>
-                    </div>
-
-                    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300" type="submit" value="Kirim">
-                        KIRIM
-                    </button>
-                </form>
-            </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-10">
+          <h1 class="text-3xl font-bold">Kontak saya</h1>
+          <p class="mt-4">
+            Dibawah ini adalah formulir untuk menghubungi saya. Silahkan isi
+            kolom yang tersedia, termasuk alamat email (opsional), dan
+            tinggalkan pesan Anda. Kami sangat menghargai masukan dan saran
+            Anda. Jika Anda ingin tetap anonim, Anda bisa memasukkan data secara
+            acak. Terima kasih atas kontribusi Anda! :) -Amri
+          </p>
         </div>
+
+        <div class="p-10">
+          <form method="post" action="#" class="space-y-4" data-netlify="true">
+            <div class="form-group">
+              <label for="nama" class="block font-semibold">Nama Anda:</label>
+              <input
+                type="text"
+                id="nama"
+                class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                name="nama"
+                placeholder="Masukkan Nama"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="block font-semibold"
+                >E-mail Anda:</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                name="email"
+                placeholder="Masukkan Email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="pesan" class="block font-semibold">Pesan Anda:</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                class="form-textarea block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200"
+                rows="5"
+                placeholder="Tulis pesan Anda di sini..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+
+            <button
+              class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300"
+              type="submit"
+              value="Kirim"
+            >
+              KIRIM
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <footer class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white">
-        <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
+    <footer
+      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white"
+    >
+      <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
     </footer>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/main.js" defer></script>
-</body>
+  </body>
 </html>
