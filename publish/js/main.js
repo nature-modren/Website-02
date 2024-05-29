@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (responseData.message === 200) {
         setLoggedInCookie();
-        location.href = "halamanKoleksi.html";
+        location.href = "Koleksi.html";
       } else if (responseData.message === 201) {
         Swal.fire("Hi!", "Pesan: ada ada saja beliau ini kwkw", "success");
       } else {
