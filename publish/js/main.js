@@ -55,4 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   ketik();
+
+  console.log(
+    "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
+    "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
+  );
 });
