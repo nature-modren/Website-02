@@ -11,9 +11,11 @@ Repositori ini berisi kode sumber untuk website biografi pribadi saya. Website i
 - **🚀 Hosting Cepat:** Menggunakan Netlify untuk hosting yang andal dan performa tinggi.
 - **🛠️ Alat Pengembangan:** Menggunakan Eruda untuk mempermudah debugging pada perangkat mobile.
 
-## 🚧 Instalasi dan Penggunaan
+## Kontribusi
 
-1. **Kloning Repositori:**
-   ```bash
-   git clone https://github.com/username/website-pribadi.git
-   cd website-pribadi
+Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mendiskusikan perubahan yang ingin Anda buat.LisensiProyek ini dilisensikan di bawah Lisensi Apache 2.0. Lihat file LICENSE untuk informasi lebih lanjut.
+
+## Keycode
+916624402774733
+
+Terima kasih telah melihat proyek saya! 🚀
