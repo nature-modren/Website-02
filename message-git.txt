@@ -1,0 +1,28 @@
+Template statis untuk message git
+
+Add: Untuk menambahkan file atau fitur baru.
+Contoh: Add: Menambahkan halaman kontak
+
+Update: Untuk memperbarui atau memodifikasi fitur atau file yang sudah ada.
+Contoh: Update: Mengubah style tombol
+
+Fix: Untuk memperbaiki bug.
+Contoh: Fix: Memperbaiki bug pada form login
+
+Remove: Untuk menghapus file atau fitur.
+Contoh: Remove: Menghapus file script.js yang tidak digunakan
+
+Refactor: Untuk merestrukturisasi kode tanpa mengubah fungsionalitas.
+Contoh: Refactor: Merapikan fungsi validasi form
+
+Docs: Untuk perubahan pada dokumentasi.
+Contoh: Docs: Menambahkan instruksi menjalankan proyek di README
+
+Test: Untuk menambahkan atau memperbarui pengujian.
+Contoh: Test: Menambahkan unit test untuk fungsi validasi
+
+Style: Untuk perubahan yang tidak mempengaruhi makna kode (misal: format, penempatan spasi, penghapusan white-space).
+Contoh: Style: Menghapus spasi berlebih di style.css
+
+Chore: Untuk tugas-tugas yang tidak masuk dalam tipe lain (misal: pembaruan build tools, konfigurasi).
+Contoh: Chore: Memperbarui dependensi
