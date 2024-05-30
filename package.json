@@ -1,8 +1,8 @@
 
 {
-  "name": "Project-002",
-  "version": "1.0.0",
-  "description": "Future website",
+  "name": "website-pribadi",
+  "version": "3.0.0",
+  "description": "website pribadi untuk tujuan biografi dan menampilkan pengalaman dalam belajar dunia program perangkat lunak",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -11,6 +11,6 @@
   "dependencies": {
     "bcryptjs": "^2.4.3"
   },
-  "author": "Nama Anda",
-  "license": "MIT"
+  "author": "Amri",
+  "license": "Apache"
 }
