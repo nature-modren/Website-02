@@ -18,4 +18,22 @@ Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mend
 ## Keycode
 916624402774733
 
+## Tipe pesan commit:
+ - Add: Untuk menambahkan file atau fitur baru
+ - Update: Untuk memperbarui fitur atau file yang sudah ada
+ - Fix: Untuk memperbaiki bug
+ - Remove: Untuk menghapus file atau fitur
+ - Refactor: Untuk merestrukturisasi kode tanpa mengubah fungsionalitas
+ - Docs: Untuk perubahan pada dokumentasi
+ - Test: Untuk menambahkan atau memperbarui pengujian
+ - Style: Untuk perubahan yang tidak mempengaruhi makna kode
+ - Chore: Untuk tugas-tugas yang tidak masuk dalam tipe lain
+
+<Tipe>: <Ringkasan>
+
+<Deskripsi opsional>
+
+
+
+## Terima kasih :)
 Terima kasih telah melihat proyek saya! 🚀
