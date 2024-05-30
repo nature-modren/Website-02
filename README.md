@@ -15,8 +15,6 @@ Repositori ini berisi kode sumber untuk website biografi pribadi saya. Website i
 
 Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mendiskusikan perubahan yang ingin Anda buat.LisensiProyek ini dilisensikan di bawah Lisensi Apache 2.0. Lihat file LICENSE untuk informasi lebih lanjut.
 
-## Keycode
-916624402774733
 
 ## Tipe pesan commit:
  - Add: Untuk menambahkan file atau fitur baru
@@ -29,11 +27,9 @@ Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mend
  - Style: Untuk perubahan yang tidak mempengaruhi makna kode
  - Chore: Untuk tugas-tugas yang tidak masuk dalam tipe lain
 
-<Tipe>: <Ringkasan>
 
-<Deskripsi opsional>
-
-
+## Keycode
+**916624402774733
 
 ## Terima kasih :)
 Terima kasih telah melihat proyek saya! 🚀
