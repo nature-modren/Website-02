@@ -1,11 +1,11 @@
 [build]
-  publish = "publish"
+  publish = "public"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs.audits]
-    output_path = "publish/reports/lighthouse.html" 
+    output_path = "public/reports/lighthouse.html" 
 
   [plugins.inputs.settings]
     locale = "id"
