@@ -5,7 +5,7 @@
 
 Repositori ini berisi kode sumber untuk website biografi pribadi saya. Website ini dibuat menggunakan TailwindCSS dan di-hosting di Netlify. Untuk pengembangan, saya juga menggunakan Eruda sebagai alat debugging.
 
-## 🌟 Fitur Utama
+## Ringkasan 
 
 - **💡 Teknologi Modern:** Dibangun dengan TailwindCSS untuk desain yang responsif dan cepat.
 - **🚀 Hosting Cepat:** Menggunakan Netlify untuk hosting yang andal dan performa tinggi.
@@ -29,7 +29,7 @@ Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mend
 
 
 ## Keycode
-**916624402774733
+916624402774733
 
 ## Terima kasih :)
 Terima kasih telah melihat proyek saya! 🚀
