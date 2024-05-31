@@ -64,6 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
       ketik();
     }
 
+    const navBeranda = document.getElementById("navBeranda");
+    const navKeahlian = document.getElementById("navKeahlian");
+    const navSaran = document.getElementById("navSaran");
+
+    navBeranda.addEventListener("click", function () {
+      window.location.href = "Index.html";
+    });
+
+    navKeahlian.addEventListener("click", function () {
+      window.location.href = "keahlian.html";
+    });
+
+    navSaran.addEventListener("click", function () {
+      window.location.href = "Saran.html";
+    });
+
     console.log(
       "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
       "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
