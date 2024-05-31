@@ -1,0 +1,134 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f8f7f4;
+}
+
+footer {
+  background-color: rgb(6, 24, 49);
+  width: 100%;
+  height: 50px;
+  border: 1px;
+  border-color: cyan;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+}
+
+.text-dark {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #555;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #545c5c;
+  margin: 1em 0;
+}
+
+.center-jumbotron {
+  width: 100%;
+  height: 100vh; /* Gunakan tinggi viewport untuk memastikan tinggi penuh layar */
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar.fixed-bottom {
+  height: 40px;
+  padding: 5px;
+  background-color: #333;
+}
+
+.navbar-brand.text-white {
+  font-size: 16px;
+}
+
+.halamanutama {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.textjudul {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.textjudul.short {
+  text-align: center;
+}
+
+.textjudul.in {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+.textjudul.out {
+  animation-name: fadeOutRight;
+  animation-duration: 1s;
+}
+
+.navtext1:hover {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+}
+
+.navtext2:hover {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+}
+
+.navtext3:hover {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+}
+
+.typing::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+}
