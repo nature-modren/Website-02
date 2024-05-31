@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
   if (!checkLoginStatus()) {
     // Jika pengguna belum login, alihkan ke halaman login atau tampilkan pesan.
     location.href = "Login.html"; // Ganti dengan halaman login yang sesuai.
@@ -11,3 +11,4 @@ function checkLoginStatus() {
   // Contoh sederhana: Periksa apakah cookie sesi "loggedIn" ada.
   return document.cookie.includes("loggedIn=true");
 }
+*/
