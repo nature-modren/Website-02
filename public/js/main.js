@@ -79,15 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     navSaran.addEventListener("click", function () {
       window.location.href = "Saran.html";
     });
-
-
-
-
-    import { getStore } from "@netlify/blobs";
-
-const store = getStore("image");
-
-console.log(store);
     
     console.log(
       "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
