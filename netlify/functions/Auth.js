@@ -38,3 +38,26 @@ exports.handler = async (event) => {
         };
     }
 };
+
+import { getStore } from "@netlify/blobs";
+
+const store = getStore("image");
+
+async function saveData(key, value) {
+  try {
+    await store.set(key, value);
+    console.log('Data saved successfully');
+  } catch (error) {
+    console.error('Error saving data:', error);
+  }
+}
+
+async function getData(key) {
+  try {
+    const value = await store.get(key);
+    console.log('Data retrieved successfully:', value);
+    return value;
+  } catch (error) {
+    console.error('Error retrieving data:', error);
+  }
+}
