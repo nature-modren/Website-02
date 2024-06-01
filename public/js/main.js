@@ -80,6 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "Saran.html";
     });
 
+
+
+
+    import { getStore } from "@netlify/blobs";
+
+const store = getStore("image");
+
+console.log(store);
+    
     console.log(
       "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
       "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
