@@ -1,3 +1,4 @@
+/* Aturan umum */
 html,
 body {
   padding: 0;
@@ -102,16 +103,8 @@ hr {
   animation-duration: 1s;
 }
 
-.navtext1:hover {
-  animation-name: fadeUp;
-  animation-duration: 1s;
-}
-
-.navtext2:hover {
-  animation-name: fadeUp;
-  animation-duration: 1s;
-}
-
+.navtext1:hover,
+.navtext2:hover,
 .navtext3:hover {
   animation-name: fadeUp;
   animation-duration: 1s;
@@ -131,4 +124,18 @@ hr {
 .picture {
   width: 200px;
   height: 200px;
+}
+
+@media (max-width: 640px) {
+  .navtext1,
+  .navtext2,
+  .navtext3 {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Tambahkan text-align: center untuk memastikan mereka rata */
+  }
+  .flex-grow {
+    flex-direction: column;
+    align-items: center; /* Pastikan elemen-elemen berada di tengah */
+  }
 }
