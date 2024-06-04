@@ -1,3 +1,5 @@
+Tentu! Berikut adalah contoh kode HTML dengan carousel yang memiliki template
+tulisan di bawah setiap slide, yang bisa diubah nanti melalui editor: ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,9 +55,15 @@
       </nav>
     </div>
 
+    <!-- Carousel -->
     <div class="container mx-auto my-10">
       <div
-        x-data="{ activeSlide: 0, slides: ['Pengalaman 1: Belajar Pemrograman di Sekolah...', 'Pengalaman 2: Mengikuti Bootcamp...', 'Pengalaman 3: Proyek Freelance Pertama...', 'Pengalaman 4: Internship di Perusahaan Teknologi...'] }"
+        x-data="{ activeSlide: 0, slides: [
+          { title: 'Pengalaman 1: Belajar Pemrograman di Sekolah...', description: 'Di sini saya belajar dasar-dasar pemrograman dan membuat proyek pertama saya menggunakan C++ dan HTML/CSS.' },
+          { title: 'Pengalaman 2: Mengikuti Bootcamp...', description: 'Mengikuti bootcamp intensif yang fokus pada pengembangan aplikasi web menggunakan JavaScript dan framework populer.' },
+          { title: 'Pengalaman 3: Proyek Freelance Pertama...', description: 'Bekerja pada proyek freelance pertama saya, membangun situs web untuk usaha kecil dengan menggunakan WordPress dan custom CSS.' },
+          { title: 'Pengalaman 4: Internship di Perusahaan Teknologi...', description: 'Magang di perusahaan teknologi besar, berkontribusi pada pengembangan backend menggunakan Node.js dan MongoDB.' }
+        ] }"
         class="relative w-full"
       >
         <div class="overflow-hidden relative h-64">
@@ -68,13 +76,15 @@
               x-transition:leave="transition ease-in duration-500"
               x-transition:leave-start="opacity-100 transform translate-x-0"
               x-transition:leave-end="opacity-0 transform -translate-x-full"
-              class="absolute inset-0 flex items-center justify-center bg-white text-black p-5 shadow-lg"
+              class="absolute inset-0 flex flex-col items-center justify-center bg-white text-black p-5 shadow-lg"
             >
-              <p class="text-xl font-semibold" x-text="slide"></p>
+              <p class="text-xl font-semibold" x-text="slide.title"></p>
+              <p class="text-base mt-2" x-text="slide.description"></p>
             </div>
           </template>
         </div>
 
+        <!-- Controls -->
         <div class="absolute inset-0 flex justify-between items-center">
           <button
             @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1"
