@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Biograpy</title>
+    <title>Website Biography</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -19,9 +19,9 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
   </head>
-  <body>
+  <body class="bg-gray-100">
     <div class="panelAtas">
-      <nav class="p-5">
+      <nav class="p-5 bg-white shadow">
         <div class="container mx-10">
           <div class="flex justify-between items-center">
             <div class="flex flex-shrink-0 text-black mr-6">
@@ -39,7 +39,7 @@
               >
               <a
                 id="navKeahlian"
-                class="nav text2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
+                class="navtext2 block mt-4 lg:inline-block lg:mt-0 text-black hover:text-cyan-200 mr-2"
                 >KEAHLIAN</a
               >
               <a
@@ -53,11 +53,51 @@
       </nav>
     </div>
 
+    <div class="container mx-auto my-10">
+      <div
+        x-data="{ activeSlide: 0, slides: ['Pengalaman 1: Belajar Pemrograman di Sekolah...', 'Pengalaman 2: Mengikuti Bootcamp...', 'Pengalaman 3: Proyek Freelance Pertama...', 'Pengalaman 4: Internship di Perusahaan Teknologi...'] }"
+        class="relative w-full"
+      >
+        <div class="overflow-hidden relative h-64">
+          <template x-for="(slide, index) in slides" :key="index">
+            <div
+              x-show="activeSlide === index"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 transform translate-x-full"
+              x-transition:enter-end="opacity-100 transform translate-x-0"
+              x-transition:leave="transition ease-in duration-500"
+              x-transition:leave-start="opacity-100 transform translate-x-0"
+              x-transition:leave-end="opacity-0 transform -translate-x-full"
+              class="absolute inset-0 flex items-center justify-center bg-white text-black p-5 shadow-lg"
+            >
+              <p class="text-xl font-semibold" x-text="slide"></p>
+            </div>
+          </template>
+        </div>
+
+        <div class="absolute inset-0 flex justify-between items-center">
+          <button
+            @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1"
+            class="text-3xl text-black p-2 bg-white bg-opacity-50 hover:bg-opacity-75"
+          >
+            &#10094;
+          </button>
+          <button
+            @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1"
+            class="text-3xl text-black p-2 bg-white bg-opacity-50 hover:bg-opacity-75"
+          >
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+
     <footer
-      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white"
+      class="flex align-center items-center justify-center mb-0 bottom-0 fixed text-white w-full bg-gray-800 p-3"
     >
       <div class="panelbawah"><a href="#">@Amri Firdaus 2024</a></div>
     </footer>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/main.js" defer></script>
     <script src="js/engine.js"></script>
