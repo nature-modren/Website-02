@@ -4,14 +4,14 @@
 
 html {
   background-color: aliceblue;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 header {
@@ -29,11 +30,11 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  height: 16px;
+  height: 50px;
   text-wrap: nowrap;
-  border-bottom: 5px solid;
-  border-color: rgb(172, 172, 228);
+  border-bottom: 5px solid rgb(172, 172, 228);
   transition: all 2s ease;
+  z-index: 1000;
 }
 
 nav ul {
@@ -46,10 +47,15 @@ nav ul {
   flex-wrap: nowrap;
 }
 
-nav ul li a {
+nav ul li {
   margin: 0 10px;
+}
+
+nav ul li a {
   text-decoration: none;
   color: white;
+  display: block;
+  padding: 8px 16px;
 }
 
 b {
@@ -60,6 +66,8 @@ hr {
   width: 100%;
   height: 2px;
   background: #0c070786;
+  border: none;
+  margin: 10px 0;
 }
 
 .logo {
@@ -105,7 +113,7 @@ nav ul li a:hover {
   overflow-y: hidden;
   overflow-x: hidden;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-idth: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
 }
 
 .kartu::-webkit-scrollbar {
@@ -115,7 +123,6 @@ nav ul li a:hover {
 .kartu:hover {
   box-shadow: none;
   border-color: var(--shadow-card);
-  scrollbar-width: none;
   overflow-y: auto;
 }
 
@@ -125,25 +132,28 @@ header:hover {
 
 footer {
   position: absolute;
-  bottom: 0px;
-  margin-bottom: 0px;
-  padding: auto;
-  justify-content: end;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(70, 115, 199);
+  color: antiquewhite;
+  text-align: center;
+  padding: 10px 0;
 }
 
 footer ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 500px) {
   header {
-    height: 40px;
+    height: auto;
     margin-bottom: 20px;
   }
 
   nav ul {
-    flex-direction: row;
-    flex-flow: row wrap;
+    flex-direction: column;
   }
 
   .tampilan {
