@@ -1,140 +1,154 @@
-html,
+:root {
+  --shadow-card: rgb(37, 89, 107);
+}
+
+html {
+  background-color: aliceblue;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: poppins;
+  font-size: 16px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #f0efeb;
-}
-
-footer {
-  background-color: rgb(6, 24, 49);
-  width: 100%;
-  height: 50px;
-  border: 1px;
-  border-color: cyan;
-}
-
-iframe {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  border: none;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
-.text-dark {
-  display: block;
+header {
+  position: fixed;
+  color: antiquewhite;
+  background-color: rgb(70, 115, 199);
+  padding: 14px 20px;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 16px;
+  text-wrap: nowrap;
+  border-bottom: 5px solid;
+  border-color: rgb(172, 172, 228);
+  transition: all 2s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  font-size: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+nav ul li a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+b {
   font-weight: bold;
-  margin-top: 10px;
-  color: #555;
 }
 
 hr {
-  border: none;
-  border-top: 2px solid #545c5c;
-  margin: 1em 0;
+  width: 100%;
+  height: 2px;
+  background: #0c070786;
 }
 
-.center-jumbotron {
-  width: 100%;
-  height: 100vh; /* Gunakan tinggi viewport untuk memastikan tinggi penuh layar */
-  margin: 0;
-  padding: 0;
+.logo {
+  margin-right: auto;
+  justify-content: flex-start;
+  flex: 100%;
 }
 
-.jumbotron {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.last {
+  align-items: flex-end;
+}
+
+nav ul .logo:hover {
+  color: white;
+}
+
+nav ul li a:hover {
+  color: rgb(126, 250, 147);
+  transition: all 0.5s ease;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.tampilan {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  margin: 3px;
+  column-gap: 34px;
 }
 
-.img-fluid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.navbar.fixed-bottom {
-  height: 40px;
-  padding: 5px;
-  background-color: #333;
-}
-
-.navbar-brand.text-white {
-  font-size: 16px;
-}
-
-.halamanutama {
-  position: relative;
+.kartu {
+  border-style: outset;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 20px 20px var(--shadow-card);
   text-align: center;
   justify-content: center;
-  align-items: center;
-}
-
-.textjudul {
-  position: absolute;
-  top: 10%;
-  left: 40%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.textjudul.short {
-  text-align: center;
-}
-
-.textjudul.in {
-  animation-name: fadeInLeft;
-  animation-duration: 1s;
-}
-
-.textjudul.out {
-  animation-name: fadeOutRight;
-  animation-duration: 1s;
-}
-
-.navtext1:hover,
-.navtext2:hover,
-.navtext3:hover {
-  animation-name: fadeUp;
-  animation-duration: 1s;
-}
-
-.typing::after {
-  content: "|";
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.picture {
   width: 200px;
   height: 200px;
+  padding: 10px;
+  transition: all 0.9s ease;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-idth: none; /* Firefox */
 }
 
-@media (max-width: 640px) {
-  .navtext1,
-  .navtext2,
-  .navtext3 {
-    margin-right: 0 !important;
-    margin-bottom: 0.5rem;
-    text-align: center; /* Tambahkan text-align: center untuk memastikan mereka rata */
+.kartu::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.kartu:hover {
+  box-shadow: none;
+  border-color: var(--shadow-card);
+  scrollbar-width: none;
+  overflow-y: auto;
+}
+
+header:hover {
+  border: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px;
+  padding: auto;
+  justify-content: end;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 40px;
+    margin-bottom: 20px;
   }
-  .flex-grow {
+
+  nav ul {
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+
+  .tampilan {
+    margin-top: 50px;
     flex-direction: column;
-    align-items: center; /* Pastikan elemen-elemen berada di tengah */
+    gap: 40px;
   }
 }
