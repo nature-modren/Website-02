@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navSaran.addEventListener("click", function () {
       window.location.href = "Saran.html";
     });
-    
+
     console.log(
       "%cwebsite dibuat oleh Amri Firdaus dengan framework Tailwind, makasi udah mampir wkwk :)",
       "color: white; background-color: #1a202c; font-size: 16px; padding: 10px; border-radius: 5px;"
@@ -87,4 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
   } catch (error) {
     console.log(error);
   }
+
+  const menu = document.querySelector("nav ul");
+  const hamburger = document.querySelector(".hamburger");
+
+  this.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
 });
