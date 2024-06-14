@@ -21,6 +21,8 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 0px;
 }
 
 header {
@@ -36,6 +38,7 @@ header {
   border-bottom: 5px solid;
   border-color: rgb(59, 59, 83);
   transition: all 5s linear;
+  margin-bottom: 20px;
 }
 
 nav ul {
@@ -65,9 +68,8 @@ hr {
 }
 
 .logo {
-  background-color: rgb(200, 205, 252);
   top: 0px;
-  left: 0px;
+  left: 50px;
   bottom: 0px;
   text-align: center;
   display: flex;
@@ -83,7 +85,10 @@ hr {
 }
 
 .last {
+  display: flex;
   align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
 }
 
 nav ul li a:hover {
@@ -113,9 +118,10 @@ nav ul li a:hover {
 
 .tampilan {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   margin: 3px;
-  column-gap: 34px;
+  row-gap: 20px;
 }
 
 .kartu {
@@ -150,6 +156,7 @@ header:hover {
 }
 
 footer {
+  background-color: white;
   position: fixed;
   bottom: 0px;
   border: 1px solid black;
@@ -170,7 +177,59 @@ footer ul li {
 footer ul li a {
   color: rgb(0, 0, 0);
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.kartu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.kartu-grub {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 24px;
+  flex: 1;
+}
+
+.info p {
+  margin: 0;
+}
+.gambar {
+  margin-top: 10px;
+}
+
+.gambar img {
+  object-fit: cover;
+  display: block;
+  width: 315px;
+  height: auto;
+  margin-top: 20px;
+  margin: 20px;
+  transition: all 0.5s ease-out;
+}
+
+.gambar img:hover {
+  box-shadow: 10px 10px var(--shadow-card);
+}
+
 @media (max-width: 700px) {
+  body {
+    padding-top: 50px;
+  }
+
   header {
     height: 25px;
     margin-bottom: 20px;
@@ -190,10 +249,20 @@ footer ul li a {
     margin: 0 20px;
   }
 
+  .gambar img {
+    display: none;
+    width: 0;
+  }
+
   .logo {
     position: static;
   }
 
+  .kartu-grub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hamburger {
     display: flex;
   }
@@ -202,6 +271,12 @@ footer ul li a {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 70px;
+  }
+
+  .kartu-grub {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   footer {
