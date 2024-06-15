@@ -94,4 +94,17 @@ document.addEventListener("DOMContentLoaded", function () {
   this.addEventListener("click", function () {
     menu.classList.toggle("active");
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector("nav ul");
+    const hamburger = document.querySelector(".hamburger");
+
+    this.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+
+    cursor = document.getElementsByClassName("cursor");
+    setInterval(() => {
+      cursor.style.opacity = cursor.style.opacity === "1" ? "0" : "1";
+    }, interval);
+  });
 });

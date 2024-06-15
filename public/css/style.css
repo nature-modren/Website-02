@@ -199,9 +199,14 @@ footer ul li a {
 }
 
 .info h1 {
-  margin: 0;
-  font-size: 24px;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-bottom: 2px;
   flex: 1;
+  animation: typing 3.5s steps(40, end), blink-caret 7.5s step-end infinite;
+  white-space: nowrap;
+  font-size: 16px;
+  border-right: 0.15em solid black;
 }
 
 .info p {
@@ -225,9 +230,28 @@ footer ul li a {
   box-shadow: 10px 10px var(--shadow-card);
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  0% {
+    border-color: orange;
+  }
+}
+
 @media (max-width: 700px) {
   body {
-    padding-top: 50px;
+    padding-top: 7S0px;
   }
 
   header {
@@ -257,6 +281,36 @@ footer ul li a {
   .logo {
     position: static;
   }
+
+  .info h1 {
+    overflow: hidden;
+    margin-top: 200px;
+    margin-bottom: 2px;
+    flex: 1;
+    white-space: nowrap;
+    font-size: 16px;
+    border-right: 0.15em solid black;
+    margin-right: 0px;
+  }
+
+  /*
+  #cursor {
+    display: inline;
+    transition: opacity 0.5 ease-out infinity;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  */
 
   .kartu-grub {
     display: flex;
